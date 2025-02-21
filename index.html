@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <title>To-Do List</title>
+</head>
+
+<body>
+    <div class="form">
+        <div class="title">
+            <h1>To-Do List</h1>
+        </div>
+        <div class="app_form">
+            <div class="add_new_task" id="add_new_task">
+                <span>Добавить</span>
+                <i class="fas fa-plus"></i>
+            </div>
+            <div class="select_task">
+                <select id="select_task">
+                    <option value="Все">Все</option>
+                    <option value="Срочное">Срочное</option>
+                    <option value="Не срочное">Не срочное</option>
+                </select>
+            </div>
+        </div>
+        <h3>Задачи:</h3>
+        <div id="tasks_list"></div>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal_form">
+            <div class="modal_header">
+                <p>Добавьте новое задание</p>
+                <span class="close_btn" id="close_btn">
+                    <i class="fas fa-times"></i>
+                </span>
+            </div>
+            <div class="title_task">
+                <p>Название:</p>
+                <input type="text" id="task_name" placeholder="Введите название">
+                <div id="msg"></div>
+            </div>
+            <div class="date_task">
+                <p>Даты выполнения:</p>
+                <input type="date" id="task_date">
+            </div>
+            <div class="status_task">
+                <p>Статус задания:</p>
+                <select id="select">
+                    <option value="Срочное">Срочное</option>
+                    <option value="Не срочное">Не срочное</option>
+                </select>
+            </div>
+            <div class="description_task">
+                <p>Описание:</p>
+                <textarea id="task_description" cols="30" rows="5" placeholder="Введите описание"></textarea>
+            </div>
+            <div class="buttons_task">
+                <button id="add_task" class="btn">Добавить</button>
+                <button id="close_modal" class="btn">Отмена</button>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
